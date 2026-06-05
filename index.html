@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Slideshow</title>
+
+<style>
+body{
+    margin:0;
+    background:#000;
+    overflow:hidden;
+}
+
+img{
+    width:100vw;
+    height:100vh;
+    object-fit:contain;
+}
+</style>
+</head>
+
+<body>
+
+<img id="slide" src="check up cardio 1.jpeg">
+
+<script>
+
+const imagens = [
+"check up cardio 1.jpeg",
+"check up cardio 2.jpeg",
+"verifique coração.jpeg",
+"verifique homem.jpeg",
+"check up infantil.jpeg",
+"check up mulher.jpeg",
+"ginecológico.jpeg"
+];
+
+let atual = 0;
+
+setInterval(function() {
+    atual = (atual + 1) % imagens.length;
+    document.getElementById("slide").src = imagens[atual];
+}, 5000);
+
+</script>
+
+</body>
+</html>
